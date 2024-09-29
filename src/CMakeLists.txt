@@ -1,2 +1,5 @@
 add_subdirectory(engine)
-add_subdirectory(client)
+
+if (${BUILD_CLIENT_APP})
+    add_subdirectory(client)
+endif()
