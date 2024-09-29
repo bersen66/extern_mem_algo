@@ -1,12 +1,27 @@
 set(ENGINE_SOURCES)
 set(ENGINE_INCLUDE_DIRS)
 
+
+if (BUILD_TESTS)
+    message(STATUS "Buildig engine tests...")
+    set(ENGINE_TESTS)
+else()
+    message(STATUS "Ignoring engine tests...")
+endif()
+
+
 add_subdirectory(join)
 add_subdirectory(order_by)
 add_subdirectory(sort)
 
+
 add_library(engine ${ENGINE_SOURCES})
 target_include_directories(engine PUBLIC ${ENGINE_INCLUDE_DIRS})
-
 target_link_libraries(engine Arrow::arrow_static)
 
+
+if (BUILD_TESTS)
+    add_executable(test_engine ${ENGINE_TESTS})
+    target_link_libraries(test_engine GTest::gtest_main engine)
+    gtest_discover_tests(test_engine)
+endif()

@@ -21,4 +21,5 @@ export THIRD_PARTY_DIR
 
 git submodule update --init --recursive
 cd "${BUILD_SCRIPTS_DIR}" || exit 1
-./install_arrow.sh || echo  "bad"
+./install_arrow.sh 
+./install_gtest.sh
