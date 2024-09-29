@@ -2,6 +2,6 @@
 
 namespace engine {
 
-void OrderBy(const char* path);
+void GroupBy(const char* path);
 
 } // namespace engine

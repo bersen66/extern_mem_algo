@@ -11,7 +11,7 @@ endif()
 
 
 add_subdirectory(join)
-add_subdirectory(order_by)
+add_subdirectory(group_by)
 add_subdirectory(sort)
 
 
