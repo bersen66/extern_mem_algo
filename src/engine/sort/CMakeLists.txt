@@ -22,3 +22,13 @@ if (BUILD_TESTS)
     )
     set(ENGINE_TESTS ${ENGINE_TESTS} PARENT_SCOPE)
 endif()
+
+# ADDING BENCHMARKS
+if (BUILD_BENCHMARKS)
+    set(BENCH_DIR ${SORT_ROOT}/benchmarks)
+    list(APPEND ENGINE_BENCHMARKS
+        ${BENCH_DIR}/example.cpp
+    )
+    set(ENGINE_BENCHMARKS ${ENGINE_BENCHMARKS} PARENT_SCOPE)
+endif()
+

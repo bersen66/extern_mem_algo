@@ -12,5 +12,9 @@ if (BUILD_TESTS)
     include(GoogleTest)
 endif()
 
+if (BUILD_BENCHMARKS)
+    include(cmake/setup_bench.cmake)
+endif()
+
 add_subdirectory(src)
 

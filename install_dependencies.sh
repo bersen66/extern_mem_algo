@@ -23,3 +23,4 @@ git submodule update --init --recursive
 cd "${BUILD_SCRIPTS_DIR}" || exit 1
 ./install_arrow.sh 
 ./install_gtest.sh
+./install_benchmark.sh

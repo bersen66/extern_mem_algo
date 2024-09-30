@@ -6,3 +6,6 @@
 	url = https://github.com/google/googletest.git
 [submodule "actionbarsherlock"]
 	ignore = dirty
+[submodule "third_party/gbench"]
+	path = third_party/gbench
+	url = https://github.com/google/benchmark.git
